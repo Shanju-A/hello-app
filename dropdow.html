@@ -1649,7 +1649,78 @@
                 </div>
             </div>
         </div>
-    
+        <div class="col-lg-9 bank_sec">
+            <div class="kt-portlet kt-portlet--responsive-mobile mb-2">
+                <div class="kt-portlet__body p-3">
+                    <div class="col-md-12 pr-0" style="text-align:right; float:right;" id="bank-excel">
+                        <div class="dt-buttons btn-group mb-3 mt-0 btns_bnk" style="text-align:right; float:right;"> 
+                            <button class="btn btn-secondary buttons-print-bnk btn_prnt" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-print"></i> Print</span></button> 
+                            <button class="btn btn-secondary buttons-pdf-bnk buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-file-pdf"></i> PDF</span></button>
+                            <button class="btn btn-secondary " id="buttons-excel-bank" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-file-excel"></i> Excel</span></button>                                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                <div class="kt-portlet__body">
+                    <table class="table table-stripe mb-0"  style="width:100.3%;  font-size:0.85rem;"  >
+                        <thead style="background:#F7F7F7; padding:10px;" class="bankcnf">
+                            <tr style="border-bottom:1px solid #111;border-left:1px solid #111;border-right:1px solid #111;border-top:1px solid #111;"> 
+                                <th style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; width:15%; border-bottom:1px solid #111;border-top:1px solid #111;" >
+                                    Date
+                                </th > 
+                                <th  style="padding:15px;width:20%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                Bank
+                                </th>  
+                                <th  style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                Description
+                                </th>  
+                                <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                    Debit
+                                </th> 
+                                <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                    Credit
+                                </th> 
+
+                            </tr>
+                        </thead>                            
+                        <tbody id="bank_stmt"> 
+                            
+                        </tbody>
+                    </table>
+                    <div class="dataloader_bnk" style="display:none;">
+                        <div style="width:90%; margin-right:50px;margin-left:50px; float:left; background:#ffffff;  border-top:1px solid #111; border-left:1px solid #111;border-right:1px solid #111;"><p style="font-weight:500; font-size:0.9rem; text-align:center;">Bank Statement</p>
+                        </div>                            
+                        <table class="table table-stripe mb-0"  style="width:90%; margin-right:50px;margin-left:50px; float:left;"  >
+                            <thead style="background:#F7F7F7; padding:10px;" class="bankcnf">
+                                <tr style="border-bottom:1px solid #111;border-left:1px solid #111;border-right:1px solid #111;border-top:1px solid #111;"> 
+                                    <th style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; width:15%; border-bottom:1px solid #111;border-top:1px solid #111;" >
+                                        Date
+                                    </th > 
+                                    <th  style="padding:15px;width:20%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                    Bank
+                                    </th>  
+                                    <th  style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                    Description
+                                    </th>  
+                                    <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Debit
+                                    </th> 
+                                    <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Credit
+                                    </th> 
+
+                                </tr>
+                            </thead>                            
+                            <tbody id="bank_stmt1"> 
+                                
+                            </tbody>
+                        </table>
+                        <p style="font-size:13px;text-align:center;">This is a computer generated Bank statement.</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
         <div class="col-lg-9 gst_sec">
             <div class="kt-portlet kt-portlet--responsive-mobile mb-2">
                 <div class="kt-portlet__body p-3">
