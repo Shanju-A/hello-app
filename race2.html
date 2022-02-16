@@ -1,0 +1,149 @@
+<html>
+    <head>
+       <link href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+       <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+       <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    </head>
+    <body>
+    <table class="datatable" id="customer"></table>
+    <script>
+      $(document).ready(function(){
+      $("#customer").DataTable({
+            data: {
+              type: "remote",
+              source: {
+                read: {
+                  "ajax": "https://ergast.com/api/f1/2004/1/results.json",
+                }
+              },
+              pageSize: 10,
+              serverPaging: !0,
+              serverFiltering: 1,
+              serverSorting: !0
+            },
+            layout: {
+              theme: "default",
+              // scroll: !1,
+              height: null,
+              footer: !1,
+              spinner:{ message : "Loading..." }
+            },
+            sortable: !0,
+            pagination: !0,
+            search: {
+              input: $("#searchcustomer")
+            },
+            columns: [
+              //   {
+              //         field: "id",
+              //         title: "",
+              //         sortable: !1,
+              //         width: 5,
+              //         textAlign: "center",
+              //         template: function(row) {
+              //           return ''
+              //         }
+              //       },
+                    {
+                      field: "round",
+                      title: "round",
+                      width: 50,
+                      overflow: "visible",
+                      template: function(row) {                        
+                          var html = `<tr><td>`+row.code+`</td></tr>`;
+                        return html;
+
+                      }
+                    },{
+                        field: "name",
+                        title: "Name",                      
+                        width: 200,
+                        template: function (row) {
+                          var company='';
+                            if(row.company)
+                            {
+                              company=row.company;
+                            }
+                            else 
+                            {
+                              company=row.entity;
+                            }
+                              return '<a href=' + Ledgers.APP + 'customer/customer-dashboard?id=' +  row.round + '  class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right" title="'+ row.name +'"  data-skin="light"><span class="">' +  row.round + '</span></a></br><a href=' + Ledgers.APP + 'customer/customer-dashboard?id=' +  row.id + '  class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right"  data-skin="light"><span class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right" title="'+company +'"  data-skin="light" style="color:#595d6e">'+company+'</span></a>';
+                          }
+                        
+                        
+                    },{
+                      field: "mobile",
+                      title: "Mobile", 
+                      width: 150,                  
+                      template: function (row) {
+                          var mobile='';
+                          var email='';
+                            if(row.mobile)
+                            {
+                              mobile=row.mobile;
+                            }
+                            else 
+                            {
+                              mobile='-';
+                            }
+                            if(row.email)
+                            {
+                              email=row.email;
+                            }
+                            else 
+                            {
+                              email='-';
+                            }
+                              return '<a href=' + Ledgers.APP + 'customer/customer-dashboard?id=' +  row.id + '  class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right"  data-skin="light"><span class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right" title="'+mobile +'"  data-skin="light" style="color:#595d6e">' +  mobile + '</span></a></br><a href=' + Ledgers.APP + 'customer/customer-dashboard?id=' +  row.id + '  class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right"  data-skin="light"><span class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right" title="'+email +'"  data-skin="light" style="color:#595d6e">'+email+'</span></a>';
+                          }
+                        
+                      
+                  },
+                  {
+                      field: "gstin",
+                      title: "Tax Information",                  
+                      width: 130,
+                      textAlign: 'center',
+                      template: function (row) {
+                          var html='';
+                            if(row.gstin!='-')
+                            {
+                              html= '<span class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right" title="'+row.gstin +'"  data-skin="light">' +  row.gstin + '</span>';                           
+                            }
+                            else 
+                            {
+                              html=`<a class='one_line_ell edit-cust' data-edit=`+row.id+`>Update Tax</a>`;
+                            }
+                          
+                              return html;
+                          }
+                  },
+                  {
+                      field: "added_on",
+                      title: "Location",                  
+                      width: 150,                    
+                      template: function (row) {
+                          var address ='';
+                          if(row.city)
+                          {
+                              address1=row.city+','+row.state;
+                          } 
+                          else 
+                          {
+                              address1=row.state;
+                          }
+                          
+                          
+                              return '<span class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right" title="'+address1 +'"  data-skin="light">' +  address1 + '</span></br><span class="one_line_ell" data-container="body" data-toggle="kt-tooltip" data-placement="right" title="'+row.country +'"  data-skin="light">'+row.country+'</span>';
+                          }
+                  }
+            ]
+        });
+      })
+    </script>
+  </body>
+</html>
+ 
+
+  

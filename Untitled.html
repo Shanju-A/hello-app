@@ -1,0 +1,956 @@
+<div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid" >
+        
+    <div class="kt-sec kt-container--fluid kt-grid__item kt-grid__item--fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="col-lg-12">
+                    <div class="kt-portlet sticky "   style="background: transparent;box-shadow: none;margin-bottom:0px!important;">
+                        <button class="kt-app__aside-close" id="kt_user_profile_aside_close">
+                            <i class="la la-close"></i>
+                        </button>
+                        <div class="kt-grid__item kt-app__toggle kt-app__aside" id="kt_user_profile_aside" style="box-shadow: none;">
+
+                            <div class="kt-portlet kt-portlet--height-fluid-" style="background:transparent;box-shadow: none;margin-bottom:0px!important;">
+                                <div class="kt-portlet__body kt-portlet__body--fit-y p-0">
+                                    <div class="kt-widget kt-widget--user-profile-1 pb-0 mt-0">
+                                        
+                                        <div class="kt-widget__body">
+                                            <div class="kt-portlet mb-2">
+                                                <div class="kt-portlet__body p-3">
+                                                    <div class="kt-widget__head mb-222">
+                                                        <!-- <div class="kt-widget__media pr-3">
+                                                            <div class="kt-badge kt-badge--xl kt-badge--primary kt-badge--rounded hname_let" style="font-size:25px;"></div>          
+                                                        </div> -->
+                                                        <div class="kt-widget__content pt-0 pb-3">
+                                                            <div class="kt-widget__section">
+                                                                <a href="javascript:;" class="kt-widget__username hname1">    </a>  
+                                                                <span class="kt-widget__subtitle hbus1" style="font-size:14px;">  </span>  
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="kt-widget4 pl-3 pb-3">
+                                                        <div class="kt-widget4__item kt-widget4__item--last pb-3">
+                                                            <div class="kt--font-boldest kt--font-primary profile_name" id="init_name">
+                                                                
+                                                            </div>
+                                                            <div class="kt-widget4__info pr-0">
+                                                                <span class="kt-widget4__title" id="hname">jjjjjj
+                                                                   
+                                                                </span><br>
+                                                                <span class="kt-widget4__sub" id="hemail">jfjjfjfj
+                                                               
+                                                                </span><br>
+                                                                <span class="kt-widget4__sub" id="hmobile">000000
+                                                               
+                                                                </span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <a class="btn btn-sm btn-outline-primary" onclick="popup('debtor','','921');">Edit </a>  <a  class="btn btn-sm btn-outline-primary cus_sta" id="init_payment" > <i class="la la-rupee"></i> Initiate Payment</a> 
+                                                        <ul class="nav nav-tabs  m-tabs-line m-tabs-line--primary mt-3" role="tablist" style="border-top:1px solid #ebedf2;">
+                                                            <li class="nav-item m-tabs__item">
+                                                                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#accounts_tab" role="tab">Information</a>
+                                                            </li>
+                                                            <li class="nav-item m-tabs__item">
+                                                                <a class="nav-link m-tabs__link" data-toggle="tab" href="#address_tab" role="tab">Address</a>
+                                                            </li>
+                                                           
+                                                            
+                                                          
+                                                        </ul>
+                                                        <div class="tab-content">
+                                                            <div class="tab-pane active" id="accounts_tab" role="tabpanel">
+                                                                <table class="table table-striped m-table" style="font-size:0.9rem !important">
+                                                                   
+                                                                    <tbody id="account_info" style="font-size:0.9rem !important">
+                                                                       
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="tab-pane" id="address_tab" role="tabpanel" style="font-size:0.9rem !important">
+                                                                <div id="add_address"></div>
+                                                                <div id="bad_type"></div>
+                                                                <div id="baddress"></div>
+                                                                
+                                                            </div>
+                                                         
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="kt-widget__items mt-0 p-4 mb-3" style="background: #fff;border-radius:4px;">
+                                                <!-- <a class="kt-widget__item kt-widget__item--active com_menu_li new_dash_li" onClick="window.scrollTo(0, 0)">
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                        <i class="fa fa-check-circle text-success new_dash_icon"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            Dashboard
+                                                        </span>
+                                                    </span>
+                                                </a> -->
+
+                                                <a class="kt-widget__item  com_menu_li" href="#bankstatement_tab">
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-times-circle bank_icon"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            Bank Statement
+                                                        </span>
+                                                    </span>
+                                                </a>
+
+                                                <a class="kt-widget__item kt-widget__item com_menu_li"  href="#active_tab" ">
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-check-circle note_icon text-success"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            Notes
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                                
+                                                <a class="kt-widget__item kt-widget__item com_menu_li" href="#notes_tab" onClick="window.scrollTo(0, 0)">
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-check-circle note_icon text-success"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            Notes
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                                
+                                                <!-- <a class="kt-widget__item  com_menu_li online_li" >
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-times-circle online_icon"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            Online Payment
+                                                        </span>
+                                                    </span>
+                                                </a> -->
+                                                <!-- <a class="kt-widget__item com_menu_li estimate_li">
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-times-circle estimate_icon"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            Estimates
+                                                        </span>
+                                                    </span>
+                                                </a> -->
+                                                <!-- <a class="kt-widget__item  com_menu_li inv_rec_li" >
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-times-circle inv_icon"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            Invoices, Receipts & eInvoices
+                                                        </span>
+                                                    </span>
+                                                </a> -->
+                                                <!-- <a class="kt-widget__item  com_menu_li einv_li">
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-times-circle einv_icon"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            GST eInvoices
+                                                        </span>
+                                                    </span>
+                                                </a> -->
+                                                <!-- <a class="kt-widget__item  com_menu_li acct_li">
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-times-circle acct_icon"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            Account Statement
+                                                        </span>
+                                                    </span>
+                                                </a> -->
+                                                <!-- <a class="kt-widget__item  com_menu_li gst_li">
+                                                    <span class="kt-widget__section">
+                                                        <span class="kt-widget__icon">
+                                                            <i class="fa fa-times-circle gst_icon"></i>
+                                                        </span>
+                                                        <span class="kt-widget__desc">
+                                                            GST Compliance
+                                                        </span>
+                                                    </span>
+                                                </a> -->
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    
+                        <div class="kt-portlet sticky " >
+                            <div class="kt-portlet__body pt-3 pb-3 pl-4 pr-4">
+                                <div class="kt-widget4">
+                                    <div class="kt-widget4__item">
+                                        <span class="kt-widget4__icon pr-2">
+                                            <span class="btn btn-label-success pt-2 pb-2 pr-2"><i class="fa fa-plus"></i></span>
+                                        </span>
+                                        <div class="kt-widget4__info">
+                                            <a href="javascript:;" class="kt-widget4__username">
+                                            Receipts
+                                            </a>
+                                        </div>
+                                        <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_rec">Rs.&nbsp; 0</span></a>
+                                    </div>
+                                    <div class="kt-widget4__item">
+                                        <span class="kt-widget4__icon pr-2">
+                                            <span class="btn btn-label-success pt-2 pb-2 pr-2"><i class="fa fa-plus"></i></span>
+                                        </span>
+                                        <div class="kt-widget4__info">
+                                            <a href="javascript:;" class="kt-widget4__username">
+                                            Credit Notes
+                                            </a>
+                                        </div>
+                                        <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_credit">Rs.&nbsp; 0</span></a>
+                                    </div>
+                                    <div class="kt-widget4__item">
+                                        <span class="kt-widget4__icon pr-2">
+                                            <span class="btn btn-label-danger pt-2 pb-2 pr-2"><i class="fa fa-minus"></i></span>
+                                        </span>
+                                        <div class="kt-widget4__info">
+                                            <a href="javascript:;" class="kt-widget4__username">
+                                            Invoices
+                                            </a>
+                                        </div>
+                                        <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_inv">Rs.&nbsp; 0</span></a>
+                                    </div>
+                                    <div class="kt-widget4__item">
+                                        <span class="kt-widget4__icon pr-2">
+                                            <span class="btn btn-label-danger pt-2 pb-2 pr-2"><i class="fa fa-minus"></i></span>
+                                        </span>
+                                        <div class="kt-widget4__info">
+                                            <a href="javascript:;" class="kt-widget4__username">
+                                            Bill of Supply
+                                            </a>
+                                        </div>
+                                        <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_bos">Rs.&nbsp; 0</span></a>
+                                    </div>
+                                    <div class="kt-widget4__item">
+                                        <span class="kt-widget4__icon pr-2">
+                                            <span class="btn btn-label-info pt-2 pb-2 pr-2"><i class="fa fa-rupee-sign"></i></span>
+                                        </span>
+                                        <div class="kt-widget4__info">
+                                            <a href="javascript:;" class="kt-widget4__username">
+                                            Account Balance&nbsp;<span class="lab_sts"></span>
+                                            </a>
+                                        </div>
+                                        <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_bal">Rs.&nbsp; 0</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            <!-- Center Section Start-->
+            <div class="col-lg-9 dash_sec">
+                <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                    <div class="kt-portlet__body p-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th>Contact Name</th>
+                                            <td><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','1','name');"><span class="hname tabl_size" ></span></a></td>
+                                        <tr>
+                                        <tr>
+                                            <th>Business Name</th>
+                                            <td><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','1','company');"><span class="hbus tabl_size"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email</th>
+                                            <td><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','1','email');"><span class="hemail tabl_size"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Mobile</th>
+                                            <td><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','1','mobile');"><span class="hmobile tabl_size"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>GST</th>
+                                            <td><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','1','gstin');"><span class="gstin_list tabl_size "></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>PAN</th>
+                                            <td><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','1','pan');"><span class="pan_list tabl_size"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Billing Address
+                                            <div class="row add_baddr"><div class="col-md-12"><a class="tabl_size tabl_b1"  onclick="popup2('address','','<?php echo $cust_topid ?>')" href="javascript:;" style="color:#b6b4b4;">Add Address</a></div></div>
+                                            </th>
+                                            <td><div class="add_address"></div><div id="baddress"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Shipping Address<div class="row add_saddr"><div class="col-md-12"><a class="tabl_size tabl_b1"  onclick="popup2('address','','<?php echo $cust_topid ?>')" href="javascript:;" style="color:#b6b4b4;">Add Address</a></div></div></div></th>
+                                            <td><div class="add_address"><div id="saddress"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Bank</th>
+                                            <td><div class="row add_bnks"><div class="col-md-12"><a class="tabl_size tabl_b1"  onclick="popup2('customer','','<?php echo $cust_topid ?>','4','');" href="javascript:;"> Add Accounts </a></div></div><div class="row"><div class="col-md-12"><div id="bank_list"></div></div></div></td>
+                                        </tr>
+                                        <tr>
+                                            <th>UPI ID</th>
+                                            <td><div class="row add_upis"><div class="col-md-12"><a class="tabl_size tabl_b1 addupiclk" id="" href="javascript:;" onclick="upi_modal();"> Add UPI ID </a></div></div><div class="row"><div class="col-md-12"><div id="upi_list"></div></div></div></td>
+                                        </tr>
+                                        <tr>
+                                            <th>TAN</th>
+                                            <td class=""><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','3','tan');"><span class="tan_list tabl_size"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>TDS Applicable</th>
+                                            <td class=""><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','3','tds');"><span class="tds_app tabl_size"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Terms of payment</th>
+                                            <td class=""><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','3','terms');"><span class="terms_cus"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Status</th>
+                                            <td class=""><a href="javascript:;" onclick="popup2('customer','','<?php echo $cust_topid ?>','1','status');"><span class="status_cus tabl_size"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Created by</th>
+                                            <td class=""><span class="add_by tabl_size tabl_b1"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Created on</th>
+                                            <td class=""><span class="add_on tabl_size"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>         
+                            </div>              
+                        </div>   
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-9 notes_sec">
+                <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                    <div class="kt-portlet__body">
+                        <div id="addnotes">
+                            <div class="input-group " >
+                                <textarea class="form-control notes-content" placeholder="Create Notes" id="add_notes" title="Please use Ctrl+Enter to create notes." rows="1" aria-describedby="btnGroupAddon" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 35px; border: 3px solid #CED4DA;"></textarea>
+                                    <a href="javascript:;" class="btn btn-primary btn-icon put-notes" id="add_notes_btn" style="height:34px; border-radius:0">
+                                    <i class="fa fa-check"></i>
+                                    </a>
+                            </div>
+                        </div>
+                        <div class="note_height" style="overflow-y:auto;overflow-x:hidden;">
+                            <div class="no_note" style="min-height:430px;">
+                                <div class="row align-items-center" style="min-height:430px;"> 
+                                    <div class="col-md-12 text-center">      
+                                        <img src="/m/app/customer/image/customer_nodata_new.jpeg" class="img-fluid" style="width:230px;">
+                                        
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <h6 class="mt-0">No Notes</h6>
+                                        <p class="">There are no notes available for this account yet.</p>
+                                    </div>
+                                </div>       
+                            </div>                    
+                            <div class="m-timeline-1 m-timeline-1--fixed">
+                                <div class="m-timeline-1__items" style="margin-top:60px;">
+                                    <div id="notes" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 online_sec">
+                <div class="online_note" style="min-height:435px;">
+                    <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                        <div class="kt-portlet__body">
+                            <div class="row align-items-center" style="min-height:430px;">
+                                <div class="col-md-12 text-center">
+                                    <img src="/m/app/customer/image/no-payments.png" class="img-fluid" style="width:230px;">
+                                    <h6 class="mt-3">No Data Available</h6>
+                                    <p class="">There are no online payments available for this account yet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="online_section">
+                    <div class="kt-portlet kt-portlet--responsive-mobile page_1 mb-2">
+                        <div class="kt-portlet__body p-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="ul_filter pl-0 mb-0 mt-0">
+                                        <li class="searchfilter_li" style="margin-right:auto;">
+                                            <div class="kt-input-icon kt-input-icon--left">
+                                                <input type="text" class="form-control form-control-sm kt-input" placeholder="Search..." id="generalSearch5">
+                                                <span class="kt-input-icon__icon kt-input-icon__icon--left">
+                                                <span><i class="la la-search"></i></span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="filt_li" style="width:120px;">
+                                            <select class="form-control form-control-sm m-bootstrap-select" id="payment-type-filter">
+                                                <option value="ALL">All</option>
+                                                <option value="INIT">Initiated</option>
+                                                <option value="VERIFIED">Verified</option>
+                                                <option value="UNVERIFIED">Unverified</option>
+                                                <option value="FAILED">Failed</option>
+                                            </select>
+                                        </li>    
+                                        <li>
+                                            <button class="btn btn-primary btn-sm btn-icon refresh" id="refresh"><i class="la la-refresh"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="input-group pull-right" id="kt_daterangepicker_order">
+                                                <input type="text" class="form-control form-control-sm kt-input date_filter" readonly="" placeholder="Date range">
+                                                <div class="input-group-append">
+                                                <span class="input-group-text"><i class="la la-calendar-check-o"></i></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet kt-portlet--responsive-mobile">
+                        <div class="kt-portlet__body kt-portlet__body--fit">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 pt-1"> 
+                                    <div class="m_datatable_order kt-datatable" id="locked_leftordercusts"></div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="col-lg-9 estimate_sec">
+                <div class="no_note_estimate" style="min-height:435px;">
+                    <div class="kt-portlet kt-portlet--responsive-mobile">
+                        <div class="kt-portlet__body">
+                            <div class="row align-items-center" style="min-height:430px;">
+                                <div class="col-md-12 text-center">
+                                    <img src="/m/app/customer/image/customer_nodata_new.jpeg" class="img-fluid" style="width:230px;">
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <h6 class="mt-3">No Data Available</h6>
+                                    <p class="">There are no estimate available for this account yet</p>
+                                    <ul class="pl-0 mt-2 nodata_btn">
+                                        <li><a class="btn btn-outline-primary btn-sm" href="/m/app/invoice/create-estimate?operation=create-estimate&cust_id=<?php echo $cust_topid ?>" target="_blank">Create Estiamte</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="est_sec">
+                    <div class="kt-portlet kt-portlet--responsive-mobile mb-2">
+                        <div class="kt-portlet__body p-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="ul_filter mb-0 pl-0" style="text-align:right;"> 
+                                        <li style="margin-right:auto;">
+                                            <a href="/m/app/invoice/create-estimate?operation=create-estimate&cust_id=<?php echo $cust_topid ?>"  class="btn btn-sm btn-outline-primary" target="_blank">Create Estimate</a>
+                                        </li>
+                                        <li>
+                                            <div class="btn-group btn-group-sm btn_filter" role="group" aria-label="Large button group">
+                                                <button type="button"  class="btn btn-outline-primary quick_filter_estimate active" data-filter="ALL">All</button>
+                                                <button type="button"  class="btn btn-outline-primary quick_filter_estimate" data-filter="PAID">Paid</button> 
+                                                <button type="button"  class="btn btn-outline-primary quick_filter_estimate" data-filter="UNPAID">Unpaid</button>
+                                                <button type="button"  class="btn btn-outline-primary quick_filter_estimate" data-filter="DELETED">Deleted</button>
+                                                <button type="button"  class="btn btn-outline-primary quick_filter_estimate" data-filter="EXPIRED">Expired</button>   
+                                            </div> 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet kt-portlet--responsive-mobile">
+                        <div class="kt-portlet__body kt-portlet__body--fit">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 pt-1">
+                                    <div class="m_datatable5 kt-datatable" id="locked_estimate_left"></div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+            </div> 
+            <div class="col-lg-9 invrecp_sec">
+                <div class="no_note_inv" style="min-height:435px;">
+                    <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                        <div class="kt-portlet__body">
+                            <div class="row align-items-center" style="min-height:430px;">
+                                <div class="col-md-12 text-center">
+                                    <img src="/m/app/customer/image/customer_nodata_new.jpeg" class="img-fluid" style="width:230px;">
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <h6 class="mt-3">No Data Available</h6>
+                                    <p class="">This data is not yet available for this customer.you can update GSTIN or issue invoice or collect payment to start viewing these tabs.</p>
+                                    <ul class="pl-0 mt-2 nodata_btn">
+                                        <li><a class="btn btn-outline-primary btn-sm" href="/m/app/invoice/create-invoice?cust_id=<?php echo $cust_topid ?>" target="_blank">Create Invoice</a></li>
+                                        <li><a class="btn btn-outline-primary btn-sm" href="javascript:;" onclick="popup2('quick-receipt','<?php echo $custdet['name']; ?>','<?php echo $cust_topid; ?>')" >Record Payment</a></li>
+                                        <li><a class="btn btn-outline-primary btn-sm" href="/m/app/banking/connect-bank?loc=reconciliation" target="_blank">Reconcile Bank Statement</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inv_sec">
+                    <div class="kt-portlet kt-portlet--responsive-mobile mb-2">
+                        <div class="kt-portlet__body p-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="ul_filter mb-0 pl-2" style="text-align:right;">
+                                        <li style="margin-right:auto;">
+                                            <a href="/m/app/invoice/create-invoice?cust_id=<?php echo $cust_topid ?>" target="_blank" class="btn btn-outline-primary  btn-sm" >Create Invoice</a>
+                                            <a href="javascript:;" onclick="popup2('quick-receipt','<?php echo $custdet['name']; ?>','<?php echo $cust_topid; ?>')" class="btn btn-outline-primary  btn-sm" >Record Payment</a>
+                                            <!-- <a class="btn btn-outline-primary btn-sm" href="/m/app/banking/connect-bank?loc=reconciliation" target="_blank">Reconcile Bank Statement</a> -->
+                                        </li> 
+                                        <li>
+                                            <div class="btn-group btn-group-sm btn_filter" role="group" aria-label="Large button group">
+                                                <button type="button" style="" class="btn btn-outline-primary  active" >Invoices</button>
+                                                <button type="button" style="" class="btn btn-outline-primary rec_btn">Receipts</button>
+                                                <button type="button" style="" class="btn btn-outline-primary einv_btn">eInvoice</button>
+                                            </div> 
+                                        <li>
+                                            <div class="btn-group btn-group-sm btn_filter" role="group" aria-label="Large button group">
+                                                <button type="button" style="" class="btn btn-outline-primary quick_filter active" data-filter="ALL">All</button>
+                                                <button type="button" style="" class="btn btn-outline-primary quick_filter" data-filter="UNPAID">Open</button>
+                                                <button type="button" style="" class="btn btn-outline-primary quick_filter" data-filter="PAID">Paid</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet kt-portlet--responsive-mobile">
+                        <div class="kt-portlet__body kt-portlet__body--fit">
+                            <div class="row">
+                                <div class="col-md-12 pt-1">    
+                                    <div class="m_datatable kt-datatable" id="locked_custinv_left"></div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rec_sec">
+                    <div class="kt-portlet kt-portlet--responsive-mobile mb-2">
+                        <div class="kt-portlet__body p-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="ul_filter mb-0 pl-0" style="text-align:right;"> 
+                                        <li style="margin-right:auto;">
+                                            <a href="/m/app/invoice/create-invoice?cust_id=<?php echo $cust_topid ?>" target="_blank" class="btn btn-outline-primary  btn-sm" >Create Invoice</a>
+                                            <a href="javascript:;" onclick="popup2('quick-receipt','<?php echo $custdet['name']; ?>','<?php echo $cust_topid; ?>')" class="btn btn-outline-primary  btn-sm" >Record Payment</a>
+                                            <!-- <a class="btn btn-outline-primary btn-sm" href="/m/app/banking/connect-bank?loc=reconciliation" target="_blank">Reconcile Bank Statement</a> -->
+                                        </li>
+                                        <li>
+                                            <div class="btn-group btn-group-sm btn_filter" role="group" aria-label="Large button group">
+                                                <button type="button" style="" class="btn btn-outline-primary bck_inv_btn">Invoices</button>
+                                                <button type="button" style="" class="btn btn-outline-primary active">Receipts</button>
+                                                <button type="button" style="" class="btn btn-outline-primary einv_btn">eInvoice</button>
+                                            </div>         
+                                            
+                                        </li>
+                                        <li>
+                                            <div class="btn-group btn-group-sm btn_filter" role="group" aria-label="Large button group">
+                                                <button type="button" style="" class="btn btn-outline-primary quick_filter_1 active" data-filter="All">All</button>
+                                                <button type="button" style="" class="btn btn-outline-primary quick_filter_1" data-filter="Credit_Available">Unreconciled</button>
+                                                <button type="button" style="" class="btn btn-outline-primary quick_filter_1" data-filter="Fully_Utilized">Reconciled</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet kt-portlet--responsive-mobile">
+                        <div class="kt-portlet__body kt-portlet__body--fit">
+                            <div class="row">
+                                <div class="col-md-12">    
+                                    <div class="m_datatable2 kt-datatable" id="locked_custrec_left"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="einv_sec">
+                    <div class="" style="min-height:521px;">
+                        <div class="kt-portlet kt-portlet--responsive-mobile mb-2">
+                            <div class="kt-portlet__body p-3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul class="ul_filter mb-0 pl-0" style="text-align:right;"> 
+                                            <li>
+                                                <div class="btn-group btn-group-sm btn_filter" role="group" aria-label="Large button group">
+                                                    <button type="button" style="" class="btn btn-outline-primary bck_inv_btn">Invoices</button>
+                                                    <button type="button" style="" class="btn btn-outline-primary rec_btn">Receipts</button>
+                                                    <button type="button" style="" class="btn btn-outline-primary einv_btn active">eInvoice</button>
+                                                </div> 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kt-portlet kt-portlet--responsive-mobile mb-2">
+                            <div class="kt-portlet__body p-3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="einv_note" style="min-height:435px;">
+                                            <div class="row align-items-center" style="min-height:430px;">
+                                                <div class="col-md-12 text-center">
+                                                    <img src="/m/app/customer/image/customer_nodata_new.jpeg" class="img-fluid" style="width:230px;">
+                                                    <h6 class="mt-3">No Data Available</h6>
+                                                    <p class="">There are no eInvoices available for this account yet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="einvoice_sec">
+                                            <table class="table table-bordered m-table mb-3 mt-3 einv_tables">
+                                                <thead class="" style="background:#f7f7f7;">
+                                                    <th>Invoice&nbsp;Date</th>
+                                                    <th>Invoice&nbsp;No.</th>
+                                                    <th>Amount</th>
+                                                    <th>Ack No.</th>
+                                                    <th>Ack Date</th>
+                                                    <th>Status</th>
+                                                    
+                                                </thead>
+                                                <tbody id="einv_table">
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!-- <div class="col-lg-9 einv_sec">
+                <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                    <div class="kt-portlet__body p-3">
+                        <div class="einv_note" style="min-height:435px;">
+                            <div class="row align-items-center" style="min-height:430px;">
+                                <div class="col-md-12 text-center">
+                                    <img src="/m/app/customer/image/customer_nodata_new.jpeg" class="img-fluid" style="width:230px;">
+                                    <h6 class="mt-3">No Data Available</h6>
+                                    <p class="">There are no eInvoices available for this account yet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="einvoice_sec" style="min-height:521px;">
+                            <table class="table table-bordered m-table mb-3 mt-3 einv_tables">
+                                <thead class="" style="background:#f7f7f7;">
+                                    <th>Invoice&nbsp;Date</th>
+                                    <th>Invoice&nbsp;No.</th>
+                                    <th>Amount</th>
+                                    <th>Ack No.</th>
+                                    <th>Ack Date</th>
+                                    <th>Status</th>
+                                    
+                                </thead>
+                                <tbody id="einv_table">
+                                    
+                                </tbody>
+                            </table>
+                        </div> 
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-lg-9 account_sec">
+                <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                    <div class="kt-portlet__body">
+                        <div class="row"> 
+                            <div class="col-md-12 col-lg-12">            
+                                <div class="form-group m-form__group m--margin-top-0 inccont">
+                                    <div class="row">            
+                                        <div class="col-md-4 text-left">
+                                            <div class='input-group pull-right' id='kt_daterangepicker_62'>  
+                                                <input type='text' class="form-control kt-input" readonly placeholder="Select date range" value=""/>  
+                                                <div class="input-group-append">  
+                                                    <span class="input-group-text">
+                                                        <i class="la la-calendar-check-o"></i>
+                                                    </span>  
+                                                </div>  
+                                            </div>
+                                        </div>       
+                                        <div class="col-md-8" style="text-align:right; float:right;">
+                                            <div class="dt-buttons btn-group accts_btns" style="text-align:right; float:right;"> 
+                                                <button class="btn btn-secondary buttons-print btn_prnt" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-print"></i> Print</span></button> 
+                                                <button class="btn btn-secondary buttons-pdf buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-file-pdf"></i> PDF</span></button> 
+                                                <button class="btn btn-secondary buttons-excel" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-file-excel"></i> Excel</span></button> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 mt-4">
+                                            <div id="account_stmt">
+                            
+                                            </div>
+                                            <div class="dataloader" style="display:none;">
+                                                <div style="width:90%; margin-right:50px;margin-left:50px; float:left; background:#fff;  border-top:1px solid #111; border-left:1px solid #111;border-right:1px solid #111;border-bottom:1px solid #111;"><p style="font-weight:500; font-size:0.9rem; text-align:center;">Customer Accounts Statement</p>
+                                                </div>                                    
+                                                <table class="table table-stripe"  style="width:90.3%; margin-right:50px;margin-left:50px; font-size:13px;"  >
+                                                    <thead style="background:#F7F7F7; padding:15px;">
+                                                        <tr style="border-bottom:1px solid #111;border-left:1px solid #111;border-right:1px solid #111;border-top:1px solid #111;"> 
+                                                            <th style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; width:120px;border-top:1px solid #111;" >
+                                                                Date
+                                                            </th > 
+                                                            <th  style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111;border-top:1px solid #111;">
+                                                                Number
+                                                            </th>  
+                                                            <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-right:1px solid #111;border-top:1px solid #111;">
+                                                                Debit
+                                                            </th> 
+                                                            <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-top:1px solid #111;">
+                                                                Credit
+                                                            </th> 
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="acount_stmt" > 
+                                                        
+                                                    </tbody>
+                                                </table>
+                                                <p style="font-size:13px;text-align:center;">This is a computer generated accounts statement.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 bank_sec">
+                <div class="kt-portlet kt-portlet--responsive-mobile mb-2 btns_bnk"  >
+                    <div class="kt-portlet__body p-3">
+                        <div class="col-md-12 pr-0" style="text-align:right; float:right;" id="bank-excel">
+                            <div class="dt-buttons btn-group mb-3 mt-0 btns_bnk" style="text-align:right; float:right;"> 
+                                <button class="btn btn-secondary buttons-print-bnk btn_prnt" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-print"></i> Print</span></button> 
+                                <button class="btn btn-secondary buttons-pdf-bnk buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-file-pdf"></i> PDF</span></button>
+                                <button class="btn btn-secondary " id="buttons-excel-bank" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-file-excel"></i> Excel</span></button>                                         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                    <div class="kt-portlet__body">
+                        <table class="table table-stripe mb-0"  style="width:100.3%;  font-size:0.85rem;"  >
+                            <thead style="background:#F7F7F7; padding:10px;" class="bankcnf">
+                                <tr style="border-bottom:1px solid #111;border-left:1px solid #111;border-right:1px solid #111;border-top:1px solid #111;"> 
+                                    <th style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; width:15%; border-bottom:1px solid #111;border-top:1px solid #111;" >
+                                        Date
+                                    </th > 
+                                    <th  style="padding:15px;width:20%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                    Bank
+                                    </th>  
+                                    <th  style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                    Description
+                                    </th>  
+                                    <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Debit
+                                    </th> 
+                                    <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Credit
+                                    </th> 
+
+                                </tr>
+                            </thead>                            
+                            <tbody id="bank_stmt"> 
+                                
+                            </tbody>
+                        </table>
+                        <div class="dataloader_bnk" style="display:none;">
+                            <div style="width:90%; margin-right:50px;margin-left:50px; float:left; background:#ffffff;  border-top:1px solid #111; border-left:1px solid #111;border-right:1px solid #111;"><p style="font-weight:500; font-size:0.9rem; text-align:center;">Bank Statement</p>
+                            </div>                            
+                            <table class="table table-stripe mb-0"  style="width:90%; margin-right:50px;margin-left:50px; float:left;"  >
+                                <thead style="background:#F7F7F7; padding:10px;" class="bankcnf">
+                                    <tr style="border-bottom:1px solid #111;border-left:1px solid #111;border-right:1px solid #111;border-top:1px solid #111;"> 
+                                        <th style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; width:15%; border-bottom:1px solid #111;border-top:1px solid #111;" >
+                                            Date
+                                        </th > 
+                                        <th  style="padding:15px;width:20%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Bank
+                                        </th>  
+                                        <th  style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Description
+                                        </th>  
+                                        <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                            Debit
+                                        </th> 
+                                        <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                            Credit
+                                        </th> 
+
+                                    </tr>
+                                </thead>                            
+                                <tbody id="bank_stmt1"> 
+                                    
+                                </tbody>
+                            </table>
+                            <p style="font-size:13px;text-align:center;">This is a computer generated Bank statement.</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 gst_sec">
+                <div class="kt-portlet kt-portlet--responsive-mobile mb-2 btns_gst" >
+                    <div class="kt-portlet__body p-3">
+                        <div class="col-md-12 pr-0" style="text-align:right; float:right;" id='gst-excel'>
+                            <div class="dt-buttons btn-group btns_gst" style="text-align:right; float:right;">
+                                <button class="btn btn-secondary buttons-print-gst btn_prnt" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-print"></i> Print</span></button> 
+                                <button class="btn btn-secondary buttons-pdf-gst buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-file-pdf"></i> PDF</span></button>
+                                <button class="btn btn-secondary " id="buttons-excel-gst" tabindex="0" aria-controls="DataTables_Table_0"><span><i class="fa fa-file-excel"></i> Excel</span></button>                                         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kt-portlet kt-portlet--responsive-mobile">
+                    <div class="kt-portlet__body p-3">
+                        <table class="table table-stripe "  style="width:100.3%;  font-size:0.85rem;"  >
+                            <thead style="background:#F7F7F7; padding:10px;" class="gstcnf">
+                                <tr style="border-bottom:1px solid #111;border-left:1px solid #111;border-right:1px solid #111;border-top:1px solid #111;"> 
+                                    <th style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; width:120px; border-bottom:1px solid #111;border-top:1px solid #111;" >
+                                        Date
+                                    </th > 
+                                    <th  style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                    Description
+                                    </th>  
+                                    <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Debit
+                                    </th> 
+                                    <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Credit
+                                    </th> 
+
+                                </tr>
+                            </thead>
+                            <tbody id="gst_itc"> 
+                            
+                            </tbody>
+                        </table> 
+                        <div class="dataloader_gst" style="display:none;">
+                            <div style="width:90%; margin-right:50px;margin-left:50px; float:left; background:#ffffff;  border-top:1px solid #111; border-left:1px solid #111;border-right:1px solid #111;border-bottom:1px solid #111;"><p style="font-weight:500; font-size:0.9rem; text-align:center;">GST Statement</p>
+                            </div>
+                            <table class="table table-stripe"  style="width:90.1%; margin-right:50px;margin-left:50px; font-size:13px;"  >
+                                <thead style="background:#F7F7F7; padding:10px;" class="gstcnf">
+                                    <tr style="border-bottom:1px solid #111;border-left:1px solid #111;border-right:1px solid #111;border-top:1px solid #111;"> 
+                                        <th style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; width:120px; border-bottom:1px solid #111;border-top:1px solid #111;" >
+                                            Date
+                                        </th > 
+                                        <th  style="padding:15px; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                        Description
+                                        </th>  
+                                        <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-right:1px solid #111; border-bottom:1px solid #111;border-top:1px solid #111;">
+                                            Debit
+                                        </th> 
+                                        <th style="padding:15px; text-align:right   !important;width:15%; font-size:1rem;font-weight:500;border-bottom:1px solid #111;border-top:1px solid #111;">
+                                            Credit
+                                        </th> 
+
+                                    </tr>
+                                </thead>
+                                <tbody id="gst_stmt" > 
+                                    
+                                </tbody>
+                            </table>
+                            <p style="font-size:13px;text-align:center;">This is a computer generated GST statement.</p>
+                        </div> 
+                    </div>     
+                </div>
+            </div>
+            <!-- Center Section End-->
+            <!-- Right Section Start-->
+            <!-- <div class="col-lg-3 count_sec">
+                <div class="kt-portlet">
+                    <div class="kt-portlet__body pt-3 pb-3 pl-4 pr-4">
+                        <div class="kt-widget4">
+                            <div class="kt-widget4__item">
+                                <span class="kt-widget4__icon pr-2">
+                                    <span class="btn btn-label-success pt-2 pb-2 pr-2"><i class="fa fa-plus"></i></span>
+                                </span>
+                                <div class="kt-widget4__info">
+                                    <a href="javascript:;" class="kt-widget4__username">
+                                    Receipts
+                                    </a>
+                                </div>
+                                <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_rec">Rs.&nbsp; 0</span></a>
+                            </div>
+                            <div class="kt-widget4__item">
+                                <span class="kt-widget4__icon pr-2">
+                                    <span class="btn btn-label-success pt-2 pb-2 pr-2"><i class="fa fa-plus"></i></span>
+                                </span>
+                                <div class="kt-widget4__info">
+                                    <a href="javascript:;" class="kt-widget4__username">
+                                    Credit Notes
+                                    </a>
+                                </div>
+                                <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_credit">Rs.&nbsp; 0</span></a>
+                            </div>
+                            <div class="kt-widget4__item">
+                                <span class="kt-widget4__icon pr-2">
+                                    <span class="btn btn-label-danger pt-2 pb-2 pr-2"><i class="fa fa-minus"></i></span>
+                                </span>
+                                <div class="kt-widget4__info">
+                                    <a href="javascript:;" class="kt-widget4__username">
+                                    Invoices
+                                    </a>
+                                </div>
+                                <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_inv">Rs.&nbsp; 0</span></a>
+                            </div>
+                            <div class="kt-widget4__item">
+                                <span class="kt-widget4__icon pr-2">
+                                    <span class="btn btn-label-danger pt-2 pb-2 pr-2"><i class="fa fa-minus"></i></span>
+                                </span>
+                                <div class="kt-widget4__info">
+                                    <a href="javascript:;" class="kt-widget4__username">
+                                    Bill of Supply
+                                    </a>
+                                </div>
+                                <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_bos">Rs.&nbsp; 0</span></a>
+                            </div>
+                            <div class="kt-widget4__item">
+                                <span class="kt-widget4__icon pr-2">
+                                    <span class="btn btn-label-info pt-2 pb-2 pr-2"><i class="fa fa-rupee-sign"></i></span>
+                                </span>
+                                <div class="kt-widget4__info">
+                                    <a href="javascript:;" class="kt-widget4__username">
+                                    Account Balance&nbsp;<span class="lab_sts"></span>
+                                    </a>
+                                </div>
+                                <a href="javascript:;" class="kt-font-primary count_font kt-font-bolder"><span id="total_bal">Rs.&nbsp; 0</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Right Section End -->
+        </div>
+    </div>
+
+</div>
+
+promotor
