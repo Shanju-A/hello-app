@@ -651,6 +651,84 @@
             <!-- Center Section Start-->
             <div class="col-lg-3">
                 <div class="kt-portlet kt-portlet--responsive-mobile page_1">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                        <h3 class="kt-portlet__head-title"> Manage User </h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body p-3">
+                        <div class="kt-notification">   
+                            <div class="dropright" style="border-bottom: 1px solid #f7f8fa">
+                                <a href="javascript:;" class="kt-notification__item dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                     
+                                    <div class="kt-notification__item-details">
+                                        <div class="kt-notification__item-title manage_li">
+                                            Manage User
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="filter_drop dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item user-type-filter_two billing_li" data-filter="3">Billing</a>
+                                    <a class="dropdown-item user-type-filter_two purchase_li" data-filter="4">Purchase</a>
+                                    <a class="dropdown-item user-type-filter_two admin_li" data-filter="2">Administrator</a>
+                                </div>
+                            </div>
+                            <div class="dropright" style="border-bottom: 1px solid #f7f8fa">
+                                <a href="javascript:;" class="kt-notification__item api_li dropdown-toggle" aria-haspopup="true" aria-expanded="false">                                     
+                                    <div class="kt-notification__item-details">
+                                        <div class="kt-notification__item-title ">
+                                            Allowed IPs
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                            </div>
+                            <div class="dropright" style="border-bottom: 1px solid #f7f8fa">
+                                <a href="javascript:;" class="kt-notification__item dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                     
+                                    <div class="kt-notification__item-details">
+                                        <div class="kt-notification__item-title">
+                                            Banking
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                            </div>
+                            <div class="dropright" style="border-bottom: 1px solid #f7f8fa">
+                                <a href="javascript:;" class="kt-notification__item dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                     
+                                    <div class="kt-notification__item-details">
+                                        <div class="kt-notification__item-title ">
+                                            Filter
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="filter_drop dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item user-type-filter" data-filter="ALL">All</a>
+                                    <a class="dropdown-item user-type-filter" data-filter="ACTIVE">Active</a>
+                                    <a class="dropdown-item user-type-filter" data-filter="DELETED">Inactive</a>
+                                </div>
+                            </div>
+                            <div class="dropright add_user_button" style="border-bottom: 1px solid #f7f8fa">
+                                <a href="javascript:;" class="kt-notification__item dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                     
+                                    <div class="kt-notification__item-details">
+                                        <div class="kt-notification__item-title " onclick="popup('employee')" title="Add User" >
+                                            Add User
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropright add_ip_button" style="border-bottom: 1px solid #f7f8fa">
+                                <a href="javascript:;" class="kt-notification__item dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                     
+                                    <div class="kt-notification__item-details">
+                                        <div class="kt-notification__item-title " onclick="popup('add-ip')" title="Add IP">
+                                            Add IP
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                
+                        </div>
+                    </div>
+                </div>
+                <div class="kt-portlet kt-portlet--responsive-mobile page_1">
                     <div class="kt-portlet__body">
                         <div class="estimate_sec1">
                             <div class="kt-widget4">
@@ -706,80 +784,6 @@
                                             <span class="kt-input-icon__icon kt-input-icon__icon--left">
                                                 <span><i class="la la-search"></i></span>
                                             </span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <button class="btn kt-btn btn-outline-primary kt-btn--icon btn-sm add_user_button" onclick="popup('employee')" title="Add User" ><i class="la la-plus"></i>&nbsp;Add User</button>
-                                        <button class="btn kt-btn btn-outline-primary kt-btn--icon btn-sm add_ip_button" onclick="popup('add-ip')" title="Add IP"><i class="la la-plus"></i>&nbsp;Add IPs
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <div class="btn-group btn-group-sm " role="group" aria-label="Small button group">
-                                            <button class="btn btn-outline-brand btn-sm" type="button" id="type-btn">Access</button>
-                                            <button class="btn btn-outline-brand btn-sm dropdown-toggle" type="button" aria-expanded="true" aria-haspopup="true" data-toggle="dropdown" style="padding:0.5rem 0.5rem;">
-                                                <span class="sr-only">Toggle Dropdown</span>
-                                            </button>
-                                            <div class="dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(54px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                                <div class="dropdown-item">
-                                                    <div class="dropdown filter_drop">
-                                                        <a class="manage_li active">
-                                                            Manage User
-                                                            <i class="la la-angle-right" style=" font-size: 12px; float:right;"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu filter_dropmenu" aria-labelledby="dropdownMenuButton">
-                                                            <a class="dropdown-item user-type-filter_two billing_li" data-filter="3">Billing</a>
-                                                            <a class="dropdown-item user-type-filter_two purchase_li" data-filter="4">Purchase</a>
-                                                            <a class="dropdown-item user-type-filter_two admin_li" data-filter="2">Administrator</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown-item">
-                                                <a class = "api_li">Allowed IPs</a>
-                                                    <!-- <a class="nav-link m-tabs__link api_li" data-toggle="tab" href="#aip_tab" role="tab">Allowed IPs</a> -->
-                                                </div>
-                                                <div class="dropdown-item">
-                                                    <div class="dropdown filter_drop">
-                                                        <a id="dropdownMenuButton1">
-                                                            Banking
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <!-- <a class="dropdown-item">Type</a>
-                                                <a class="dropdown-item">Payment</a> -->
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="btn-group btn-group-sm drop_hide" role="group" aria-label="Small button group">
-                                            <button class="btn btn-outline-brand btn-sm" type="button" id="type-btn">All</button>
-                                            <button class="btn btn-outline-brand btn-sm dropdown-toggle" type="button" aria-expanded="true" aria-haspopup="true" data-toggle="dropdown" style="padding:0.5rem 0.5rem;">
-                                            <span class="sr-only">Toggle Dropdown</span>
-                                            </button>
-                                            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(54px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                                <div class="dropdown-item">
-                                                    <div class="dropdown filter_drop">
-                                                        <a class = "user-type-filter" data-filter="ALL">
-                                                            All
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown-item">
-                                                    <div class="dropdown filter_drop">
-                                                        <a class = "user-type-filter" data-filter="ACTIVE">
-                                                            Active
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown-item">
-                                                    <div class="dropdown filter_drop">
-                                                        <a class = "user-type-filter" data-filter="DELETED">
-                                                            InActive
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <!-- <a class="dropdown-item">Type</a>
-                                                <a class="dropdown-item">Payment</a> -->
-                                            </div>
                                         </div>
                                     </li>
                                     <!-- <li>
@@ -2527,7 +2531,7 @@ if (type == 'estimate') {
                         <label for="example-text-input" class="col-3 col-form-label">Email</label>
                         <div class="col-9">
                             <p class="mb-0">
-                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7506141c031c121b10061d351c1b111c14131c191c1b12065b161a18">[email&#160;protected]</a>                                </p>
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f380929a859a949d96809bb39a9d979a92959a9f9a9d9480dd909c9e">[email&#160;protected]</a>                                </p>
                         </div>
                     </div>
                     <div class="form-group kt-form__group row">
@@ -4558,7 +4562,7 @@ function popup(type, name = '', id = '', servicetype = '', mode = '', display_na
 
     } else if (type == 'tax_payments') {
         $('#modal_dialog').addClass('modal-md');
-        var token = "M0R3WXFNb01qY254Q3pTVHhuRW1sZklSbGhiTnNTQVZuSmFKTk1RQWZUYitUS2ZFTDZRT1VhOU5NNVVDS0c4UWIwczRCcDU2c050alg3VDlZV0xqRndGZUx6ZGRtODAyS1Rna0xGWkRPc3BlTUVlY2NKeEdFR213WlA4REZodlg1TGloNko2K094TklGOGY4UDBHbFYrNTNWek9BS2FQamUzNThPSzhkOHBZVkpRNzRBQmVsMjV2ZWFhRCt5blBhbkwxMUsrTG9JVm5LWlI5RU5sOCs2bk1uZDdwN1U0ckxDSzJNc2sxcDJzK2Z5T05LTzJ6eXJUdTNsZDJlUVFjMVVhb01PTWRKQjcvS0FLei9BdzdNVDdtY1NlbVcvMjN1WXB4VEJ0Q1JSdEJsNVZkdS9rNlllOTZDaG1abG9qWWg=";
+        var token = "bXJQVHVxUHBRbXNORitLOXd2QjZxTG1hZ2ROdm5ia3hTcFBabkZRNTJPazJJWlp0L0hlSDlmTmJrbE15NWxDNGF5YmhteFp6TU1KNVFtclg2MFpEMloxbG9PREF4d0FhUnpUQkxqS1JzZ3JkZjJlam55TVY1bTRtQ3NCaFQ5MHpJYlRTTTJRTmplczdjYWtTM2kyR296cnFLckFSQmVhMnhuRGRxVkI3TUcxSE9veVVTM0crV1ViZGxOZ1Y2Vk1Sd3FZM0tuOGF6bjNDV0Q3WXNWRk1jbFQ1VkFSM3FXRHV4WTE0bU8xYXNUWVlSNkFqOUFPM1hJdE5kL2VxYTFCd2xDRG01Qm1JOHJ4V2lweGF0RU13K2RQbjNVd0ZnQmx0ejhmQUJpc0xHZjBKckdJdzB5eHpaeWZKOE5hWURVRkQ=";
         url = "https://taxpaydev.ledgers.cloud/app.php?token="+token;
         $('iframe.modalif').attr('src', url);
         $('#m_modal_4').modal('show');
@@ -4566,7 +4570,7 @@ function popup(type, name = '', id = '', servicetype = '', mode = '', display_na
         $(".modal-content").css('margin', 'auto');
     } else if (type == 'paperless_direct_upload') {
         $('#modal_dialog').addClass('modal-lg');
-        var token = "M0R3WXFNb01qY254Q3pTVHhuRW1sZklSbGhiTnNTQVZuSmFKTk1RQWZUYitUS2ZFTDZRT1VhOU5NNVVDS0c4UWIwczRCcDU2c050alg3VDlZV0xqRndGZUx6ZGRtODAyS1Rna0xGWkRPc3BlTUVlY2NKeEdFR213WlA4REZodlg1TGloNko2K094TklGOGY4UDBHbFYrNTNWek9BS2FQamUzNThPSzhkOHBZVkpRNzRBQmVsMjV2ZWFhRCt5blBhbkwxMUsrTG9JVm5LWlI5RU5sOCs2bk1uZDdwN1U0ckxDSzJNc2sxcDJzK2Z5T05LTzJ6eXJUdTNsZDJlUVFjMVVhb01PTWRKQjcvS0FLei9BdzdNVDdtY1NlbVcvMjN1WXB4VEJ0Q1JSdEJsNVZkdS9rNlllOTZDaG1abG9qWWg=";
+        var token = "bXJQVHVxUHBRbXNORitLOXd2QjZxTG1hZ2ROdm5ia3hTcFBabkZRNTJPazJJWlp0L0hlSDlmTmJrbE15NWxDNGF5YmhteFp6TU1KNVFtclg2MFpEMloxbG9PREF4d0FhUnpUQkxqS1JzZ3JkZjJlam55TVY1bTRtQ3NCaFQ5MHpJYlRTTTJRTmplczdjYWtTM2kyR296cnFLckFSQmVhMnhuRGRxVkI3TUcxSE9veVVTM0crV1ViZGxOZ1Y2Vk1Sd3FZM0tuOGF6bjNDV0Q3WXNWRk1jbFQ1VkFSM3FXRHV4WTE0bU8xYXNUWVlSNkFqOUFPM1hJdE5kL2VxYTFCd2xDRG01Qm1JOHJ4V2lweGF0RU13K2RQbjNVd0ZnQmx0ejhmQUJpc0xHZjBKckdJdzB5eHpaeWZKOE5hWURVRkQ=";
         url = "https://paperlessdev.indiafilings.com/ledgers/upload_docs?token="+token;
         $('iframe.modalif').attr('src', url);
         $('#m_modal_4').modal('show');
