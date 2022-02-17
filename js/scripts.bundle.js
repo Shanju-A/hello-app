@@ -10017,6 +10017,17 @@ KTUtil.addEvent(closeIcon, 'click', handleCancel);
 };
 };
 
+
+ 
+$('.acct_li').click(function(){
+    $('.account_sec').removeClass('col-lg-6');
+    $('.account_sec').addClass('col-lg-9');
+})
+
+
+
+
+
 var KTQuickSearchInline = KTQuickSearch;
 var KTQuickSearchOffcanvas = KTQuickSearch;
 
