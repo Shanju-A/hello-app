@@ -22,13 +22,13 @@
     ;NREUM.loader_config={accountID:"3400058",trustKey:"3400058",agentID:"322550679",licenseKey:"NRJS-d96b2d024d6e0083bbb",applicationID:"322550679"}
     ;NREUM.info={beacon:"bam.eu01.nr-data.net",errorBeacon:"bam.eu01.nr-data.net",licenseKey:"NRJS-d96b2d024d6e0083bbb",applicationID:"322550679",sa:1}
     </script>
-                <link href="/n/app/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/n/app/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="/n/app/assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css">
-        <link href="/n/app/assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css">
-        <link href="/n/app/assets/css/skins/brand/light.css" rel="stylesheet" type="text/css">
-        <link href="/n/app/assets/css/skins/aside/light.css" rel="stylesheet" type="text/css">
-        <link href="/m/app/assets/custom-css/common_new_cs.css" rel="stylesheet" type="text/css">
+                <link href="css/plugins.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="css/base/light.css" rel="stylesheet" type="text/css">
+        <link href="css/menu/light.css" rel="stylesheet" type="text/css">
+        <link href="css/brand/light.css" rel="stylesheet" type="text/css">
+        <link href="css/aside/light.css" rel="stylesheet" type="text/css">
+        <link href="css/common_new_cs.css" rel="stylesheet" type="text/css">
             <script>
       WebFont.load({
         google: {
@@ -122,9 +122,9 @@
                 }
             };
         </script>
-        <script src="/n/app/assets/plugins/global/plugins.bundle.js"></script>
-        <script src="/n/app/assets/js/scripts.bundle.js"></script>
-        <script src="/m/app/assets/custom-js/common_news.js" type="text/javascript"></script>
+        <script src="js/plugins.bundle.js"></script>
+        <script src="js/scripts.bundle.js"></script>
+        <script src="js/common_news.js" type="text/javascript"></script>
                 <style> .main_body { visibility: hidden; } *::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);border-radius: 10px;background-color: #F5F5F5;}*::-webkit-scrollbar {width: 5px;height: 7px;background-color: #F5F5F5;}*::-webkit-scrollbar-thumb {border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);background-color: rgba(85, 85, 85, 0.3);}body::-webkit-scrollbar-track,body::-webkit-scrollbar-thumb {margin-top: 70px;}@-webkit-keyframes pound{to{transform: scale(1.1);}}@keyframes pound{to{transform:scale(1.1);}}</style>
   </head>
         <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed  kt-page--loading">
