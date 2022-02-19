@@ -4005,10 +4005,10 @@ localStorage.setItem('promoter-1-meta', JSON.stringify(datajson));
 localStorage.setItem('debtor-1-meta', JSON.stringify(datajson));
 localStorage.setItem('creditor-1-meta', JSON.stringify(datajson));
 localStorage.setItem('deleted-1-meta', JSON.stringify(datajson));
-var customer = {
+var employee = {
 init: function() {
   var t, e;
-  t = $("#customer").KTDatatable({
+  t = $("#").KTDatatable({
       data: {
         type: "remote",
         source: {
@@ -4052,7 +4052,7 @@ init: function() {
                 template: function(row) {                        
                     var color='info';
                     var status='Action';
-                    var html = `<div class='dropdown'><a href='#' class='btn btn-outline-hover-info btn-elevate btn-icon' data-toggle='dropdown'><i class='la la-ellipsis-h text-info'></i></a><div class='dropdown-menu dropdown-menu-right'><a class='dropdown-item edit-cust' data-edit=`+row.id+`>Edit</a><a class='dropdown-item del-cust' data-delete=`+row.id+`> Delete</a></div></div>`;
+                    var html = `<div class='dropdown'><a href='#' class='btn btn-outline-hover-info btn-elevate btn-icon' data-toggle='dropdown'><i class='la la-ellipsis-h text-info'></i></a><div class='dropdown-menu dropdown-menu-right'><a class='dropdown-item insu-cust' style='color:inherit' href='https://www.w3schools.com/asp/showfile_c.asp?filename=try_webpages_cs_001'>INSURANCE</a><a class='dropdown-item edit-cust' data-edit=`+row.id+`>Edit</a><a class='dropdown-item del-cust' data-delete=`+row.id+`> Delete</a></div></div>`;
                   
                   
                   return html;
@@ -4567,15 +4567,15 @@ init: function() {
 };
 
 //employee//
-var employee = {
+var customer = {
 init: function() {
   var t, e;
-  t = $("#employee").KTDatatable({
+  t = $("#customer").KTDatatable({
       data: {
         type: "remote",
         source: {
           read: {
-            url: Ledgers.API + "connectors/list-contact?operation=listing-employee",
+            url: "deleted.json",
           }
         },
         pageSize: 10,
@@ -4604,7 +4604,7 @@ init: function() {
                 template: function(row) {                        
                     var color='info';
                     var status='Action';
-                    var html = `<div class='dropdown'><a href='#' class='btn btn-outline-hover-info btn-elevate btn-icon' data-toggle='dropdown'><i class='la la-ellipsis-h  text-info'></i></a><div class='dropdown-menu dropdown-menu-right'><a class='dropdown-item edit-emp' data-edit=`+row.id+`>Edit</a><a class='dropdown-item del-emp' data-delete=`+row.id+`> Delete</a><a class='dropdown-item del-emp' href="https://www.w3schools.com/asp/razor_syntax.asp">INSURANCE</a></div></div>`;
+                    var html = `<div class='dropdown'><a href='#' class='btn btn-outline-hover-info btn-elevate btn-icon' data-toggle='dropdown'><i class='la la-ellipsis-h  text-info'></i></a><div class='dropdown-menu dropdown-menu-right'><a class='dropdown-item insur-emp' data-edit=`+row.id+`>INSURANCE</a><a class='dropdown-item edit-emp' data-edit=`+row.id+`>Edit</a><a class='dropdown-item del-emp' data-delete=`+row.id+`> Delete</a></div></div>`;
                   
                   
                   return html;
