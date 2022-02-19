@@ -4013,7 +4013,7 @@ init: function() {
         type: "remote",
         source: {
           read: {
-            url: Ledgers.API + "connectors/list-contact?operation=listing-customer",
+            url: "deleted.json",
           }
         },
         pageSize: 10,
@@ -4604,7 +4604,7 @@ init: function() {
                 template: function(row) {                        
                     var color='info';
                     var status='Action';
-                    var html = `<div class='dropdown'><a href='#' class='btn btn-outline-hover-info btn-elevate btn-icon' data-toggle='dropdown'><i class='la la-ellipsis-h  text-info'></i></a><div class='dropdown-menu dropdown-menu-right'><a class='dropdown-item edit-emp' data-edit=`+row.id+`>Edit</a><a class='dropdown-item del-emp' data-delete=`+row.id+`> Delete</a></div></div>`;
+                    var html = `<div class='dropdown'><a href='#' class='btn btn-outline-hover-info btn-elevate btn-icon' data-toggle='dropdown'><i class='la la-ellipsis-h  text-info'></i></a><div class='dropdown-menu dropdown-menu-right'><a class='dropdown-item edit-emp' data-edit=`+row.id+`>Edit</a><a class='dropdown-item del-emp' data-delete=`+row.id+`> Delete</a><a class='dropdown-item del-emp' href="https://www.w3schools.com/asp/razor_syntax.asp">INSURANCE</a></div></div>`;
                   
                   
                   return html;
