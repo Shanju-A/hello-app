@@ -175,6 +175,7 @@
                                     <div class="kt-portlet__body " style="padding:20px;">
                                         <div class="info_addr">
                                             <div class="tab-pane active" id="m_portlet_tab_info" aria-expanded="false">
+                                            <h4>Employee Details</h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -288,10 +289,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane active mt-5 children" id="children" aria-expanded="false">
-                                                
+                                            <div class="tab-pane active mt-5 children" id="children" aria-expanded="false">                 
                                             </div>
                                             <button type="button"  class="btn btn-outline-primary add_cust  children_no active">Add children Details</button>
+                                            
                                         </div>     
                                     </div>
                                 </div>
@@ -369,13 +370,32 @@
 <script type="text/javascript">
 var count=1;
 $(document).on('click','.children_no', function(){
-   
-   
-   $('.children').append('<h5>'+count+++'.Children Details<h5><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control customer-name" name="name"  placeholder ="Children Name"  id="name""></div></div> <div class="col-md-6"><div class="form-group"><input type="number" class="form-control" name="age" placeholder="Age" id="age"></div></div></div><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="dob" placeholder="Date of Birth formate(dd/mm/yyyy)" id="dob"></div></div><div class="col-md-6"><div class="form-group"> <input type="number" class="form-control" name="aadhaar" id="aadhaar" placeholder="Enter Aadhaar Number" maxlength="14"></div></div></div>');
   
-    
-});
+   
+   $('.children').append('<div class="remove'+count+'"<h5>'+count+++'.Children Details<h5><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control customer-name" name="name"  placeholder ="Children Name"  id="name""></div></div> <div class="col-md-6"><div class="form-group"><input type="number" class="form-control" name="age" placeholder="Age" id="age"></div></div></div><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="dob" placeholder="Date of Birth formate(dd/mm/yyyy)" id="dob"></div></div><div class="col-md-6"><div class="form-group"> <input type="number" class="form-control" name="aadhaar" id="aadhaar" placeholder="Enter Aadhaar Number" maxlength="14"></div></div></div></div>');
  
+   if (count==2) {
+
+    $('.info_addr').append('<button type="button"  class="btn btn-danger add_cust  rmchild_no active ml-5">Remove children Details</button>');
+       
+   }else  if (count>5) {
+    $('.children_no').hide();
+   }
+
+});
+
+
+
+$(document).on('click','.rmchild_no', function(){
+$('.remove'+(count-1)).remove();
+count--;
+if(count<=5){
+    $('.children_no').show();
+   }
+if(count==1){
+   $('.rmchild_no').remove(); 
+}
+});
 
 $(document).on('click','.info_li', function(){
     $(".info_addr").css('display','block');
