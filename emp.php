@@ -170,12 +170,13 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-md-12">
                                 <div class="kt-portlet kt-portlet--responsive-mobile">
                                     <div class="kt-portlet__body " style="padding:20px;">
                                         <div class="info_addr">
                                             <div class="tab-pane active" id="m_portlet_tab_info" aria-expanded="false">
-                                            <h4>Employee Details</h4>
+                                            
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -228,7 +229,23 @@
                                                             <input type="text" class="form-control" name="aadhaar" id="aadhaar" placeholder="Enter Aadhaar Number" maxlength="14">  
                                                         </div>
                                                     </div>
-                                            
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="status" id="status" style="width:100%;" title="status">
+                                                                <option selected="" disabled="" hidden="">Martial Status</option>
+                                                                
+                                                                    <option value="1">Single</option>
+                                                                    <option value="2">Married</option>                                                   
+                                                              
+                                                            </select>
+                                                            <!-- <select class="form-control" name="status" id="status" style="width:100%;" title="Status">
+                                                                <option value="1" selected>Active</option>
+                                                                <option value="0">Disabled</option>
+                                                            </select> -->
+                                                        </div>
+                                                    </div>
                                                     <!-- <div class="col-md-6">
                                                         <div class="form-group">
                                                             <span class="required m--font-danger" aria-required="true" style="display:none;"> * </span>
@@ -260,39 +277,42 @@
                                                         </div>
                                                     </div> -->
                                                 </div>
-                                            </div>
-                                            <div class="tab-pane active mt-5" id="m_portlet_tab_info" aria-expanded="false">
+                                           
+                                            <div class="tab-pane active mt-5 hide" id="spouce" style="display:none" aria-expanded="false">
                                                <div class="row">
                                                    <div class="col-md-6">
                                                         <div class="form-group">
                                                             <div class="input-group" style="width:100%;">
-                                                              <input type="text" class="form-control customer-name" name="name" style="width:75%;" placeholder ="SPouce Name"  id="name" oninput="this.value=this.value.replace(/[^A-Za-z_@.!#$%&*-+\s]/g,'');">
+                                                              <input type="text" class="form-control customer-name" name="spouce_name" style="width:75%;" placeholder ="SPouce Name"  id="name" oninput="this.value=this.value.replace(/[^A-Za-z_@.!#$%&*-+\s]/g,'');">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                           <input type="number"  class="form-control" name="age" placeholder="Age" id="age">
+                                                           <input type="number"  class="form-control" name="spouce_age" placeholder="Age" id="age">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" name="dob" placeholder="Date of Birth formate(dd/mm/yyyy)" id="dob">
+                                                            <input type="text" class="form-control" name="spouce_dob" placeholder="Date of Birth formate(dd/mm/yyyy)" id="dob">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" name="aadhaar" id="aadhaar" placeholder="Enter Aadhaar Number" maxlength="14">  
+                                                            <input type="text" class="form-control" name="spouce_aadhaar" id="spouce_aadhaar" placeholder="Enter Aadhaar Number" maxlength="14">  
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane active mt-5 children" id="children" aria-expanded="false">                 
                                             </div>
-                                            <button type="button"  class="btn btn-outline-primary add_cust  children_no active">Add children Details</button>
-                                            
+                                            <div class="col-lg-3">
+                                                <li  class="rem" style="list-style:none,display:none">
+                                                  <button type="button"  class="btn btn-outline-primary   children_no active">Add children Details</button>
+                                                </li>
+                                            </div>
                                         </div>     
                                     </div>
                                 </div>
@@ -372,11 +392,11 @@ var count=1;
 $(document).on('click','.children_no', function(){
   
    
-   $('.children').append('<div class="remove'+count+'"<h5>'+count+++'.Children Details<h5><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control customer-name" name="name"  placeholder ="Children Name"  id="name""></div></div> <div class="col-md-6"><div class="form-group"><input type="number" class="form-control" name="age" placeholder="Age" id="age"></div></div></div><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="dob" placeholder="Date of Birth formate(dd/mm/yyyy)" id="dob"></div></div><div class="col-md-6"><div class="form-group"> <input type="number" class="form-control" name="aadhaar" id="aadhaar" placeholder="Enter Aadhaar Number" maxlength="14"></div></div></div></div>');
+   $('.children').append('<div class="remove'+count+'"><h5>'+count+++'.Children Details<h5><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control customer-name" name="name"  placeholder ="Children Name"  id="name""></div></div> <div class="col-md-6"><div class="form-group"><input type="number" class="form-control" name="age" placeholder="Age" id="age"></div></div></div><div class="row"><div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="dob" placeholder="Date of Birth formate(dd/mm/yyyy)" id="dob"></div></div><div class="col-md-6"><div class="form-group"> <input type="number" class="form-control" name="aadhaar" id="aadhaar" placeholder="Enter Aadhaar Number" maxlength="14"></div></div></div></div>');
  
    if (count==2) {
 
-    $('.info_addr').append('<button type="button"  class="btn btn-danger add_cust  rmchild_no active ml-5">Remove children Details</button>');
+    $('.rem').append('<button type="button"  class="btn btn-danger add_cust  rmchild_no active ml-5">Remove children Details</button>');
        
    }else  if (count>5) {
     $('.children_no').hide();
@@ -384,7 +404,10 @@ $(document).on('click','.children_no', function(){
 
 });
 
-
+$(document).ready(function(){
+    $('.children_no').hide();
+    $('input[name="name"]').focus();
+});
 
 $(document).on('click','.rmchild_no', function(){
 $('.remove'+(count-1)).remove();
@@ -396,6 +419,18 @@ if(count==1){
    $('.rmchild_no').remove(); 
 }
 });
+
+$('#status').on('change', function() {
+           var val=$(this).val();
+           if(val==1){
+             $('#spouce').css("display","none")
+            $('.children_no').css("display","none");
+           }else if(val==2){
+            $('#spouce').css("display","block");
+            $('.children_no').show();
+           }
+          
+       });
 
 $(document).on('click','.info_li', function(){
     $(".info_addr").css('display','block');
