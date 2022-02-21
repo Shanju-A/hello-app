@@ -4604,7 +4604,7 @@ init: function() {
                 template: function(row) {                        
                     var color='info';
                     var status='Action';
-                    var html = `<div class='dropdown'><a href='#' class='btn btn-outline-hover-info btn-elevate btn-icon' data-toggle='dropdown'><i class='la la-ellipsis-h  text-info'></i></a><div class='dropdown-menu dropdown-menu-right'><a class='dropdown-item insur-emp' data-edit=`+row.id+`>INSURANCE</a><a class='dropdown-item edit-emp' data-edit=`+row.id+`>Edit</a><a class='dropdown-item del-emp' data-delete=`+row.id+`> Delete</a></div></div>`;
+                    var html = `<div class='dropdown'><a href='#' class='btn btn-outline-hover-info btn-elevate btn-icon' data-toggle='dropdown'><i class='la la-ellipsis-h  text-info'></i></a><div class='dropdown-menu dropdown-menu-right'><a class='dropdown-item insur-emp' data-insurance=`+row.id+`>INSURANCE</a><a class='dropdown-item edit-emp' data-edit=`+row.id+`>Edit</a><a class='dropdown-item del-emp' data-delete=`+row.id+`> Delete</a></div></div>`;
                   
                   
                   return html;
@@ -5873,6 +5873,36 @@ popup2('supplier','',$(this).attr("data-edit"));
 $(document).on('click','.edit-emp', function(){   
 popup2('employee','',$(this).attr("data-edit"));     
 });
+
+$(document).on('click','.insur-emp', function(){   
+insurance('employee','',$(this).attr("data-insurance"));     
+});
+
+function insurance(type,name='',id=''){
+console.log(type);
+
+if(type=='employee'){
+    if (id) {
+            console.log("hello");
+            url = "emp.php";
+            height = '835px';
+            $('iframe.modalif').attr('src', url);
+
+
+      $('.quickview_sec').css('display','block');
+      //$('.quickview_sec').css('width','650');
+      $('.quickview_overlay').css('display','block');
+      $("iframe.modalif").css('height', height);
+     
+        } 
+
+
+}
+
+}
+
+
+
 $(document).on('click','.edit-prom', function(){   
 popup2('promoter','',$(this).attr("data-edit"));     
 });
