@@ -54,14 +54,3 @@
 </body>
 </html>
 
-<!--  $('#table').dataTable( {
-
-        "aaData":data.MRData.RaceTable.Races[0].Results,
-        "columns": [
-            { "data": "position" },
-            { "data": "Driver.code" },
-            { "data": "Driver.driverId" },
-            { "data": "Driver.givenName" }
-            
-        ]
-    }) -->
